@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet" />
+    <script defer src="./oop.js"></script>
+    <link rel="stylesheet" href="./oop.css" />
+    <title>OOP Form</title>
+  </head>
+  <body id="body">
+    <main id="main">
+      <form action="/">
+        <!-- name -->
+        <input id="nameInp" placeholder="Nom du produit" type="text" />
+        <p class="output" id="nameP"></p>
+        <!-- mark -->
+        <input id="markInp" placeholder="Mark du produit" type="text" />
+        <p class="output" id="markP"></p>
+        <!-- prix -->
+        <input id="prixInp" placeholder="prix du produit" type="text" />
+        <p class="output" id="prixP"></p>
+        <!-- date-->
+        <label for="date">date de production</label>
+        <input name="date" id="dateInp" type="date" />
+        <p class="output" id="dateP"></p>
+        <!-- type -->
+        <label>Saisir le type du produit</label>
+        <select name="type" id="types">
+          <option class="produit"></option>
+          <option value="hygiène et toilette" class="produit">
+            hygiène et toilette
+          </option>
+          <option value="soins esthétiques" class="produit">
+            soins esthétiques
+          </option>
+          <option value="produits solaires" class="produit">
+            produits solaires
+          </option>
+          <option value=" beauté des mains et des pieds" class="produit">
+            beauté des mains et des pieds
+          </option>
+          <option value="produits de maquillage" class="produit">
+            produits de maquillage
+          </option>
+          <option value="entretien capillaires" class="produit">
+            entretien capillaires
+          </option>
+          <option value="parfums" class="produit">parfums</option>
+        </select>
+        <p class="output" id="typeP"></p>
+        <!-- promotion -->
+        <label id="promoHead" for="/">promotion</label>
+        <div class="flex">
+          <div class="oui">
+            <label id="ouiLable" for="/">Oui</label>
+            <input
+              class="radioInp"
+              id="ouiInp"
+              value="oui"
+              name="promotion"
+              type="radio" />
+          </div>
+          <div class="non">
+            <label id="nonLable" for="/">Non</label>
+            <input
+              class="radioInp"
+              id="no"
+              value="non"
+              name="promotion"
+              type="radio" />
+          </div>
+        </div>
+        <p class="output" id="promoP"></p>
+        <div class="buttons">
+          <button id="btn">Ajouter</button>
+          <button id="edit">Modify</button>
+        </div>
+      </form>
+      <section class="productCard">
+        <table id="table">
+          <tr>
+            <td>nom</td>
+            <td>marque</td>
+            <td>prix</td>
+            <td>date de publication</td>
+            <td>type</td>
+            <td>en promotion</td>
+            <td class="notIn"></td>
+          </tr>
+          <tbody id="tbody"></tbody>
+        </table>
+      </section>
+    </main>
+    <div id="pop" class="modal">
+      <div class="popUp">
+        <button class="X">X</button>
+        <p id="detailOutput"></p>
+        <button id="confirm">Confirm</button>
+      </div>
+    </div>
+    <div id="deletePop" class="modal">
+      <div class="deletePopUp">
+        <button class="X2">X</button>
+        <!-- <p id="detailOutput"></p> -->
+        <button id="confirmDelete">suprrimer</button>
+      </div>
+    </div>
+  </body>
+</html>
